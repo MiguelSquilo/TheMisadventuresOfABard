@@ -72,7 +72,7 @@ MonoBehaviour:
   wallTiles:
   - {fileID: 8104793597323072501, guid: 44b8cf2e5bb6548499a3df667d54967d, type: 3}
   enemyTiles:
-  - {fileID: 8104793597323072501, guid: 44b8cf2e5bb6548499a3df667d54967d, type: 3}
+  - {fileID: 7176720925348603683, guid: b8a792e66dd25ef4eb84e450816002f3, type: 3}
   Player: {fileID: 8656724046257793456, guid: f659dcde131d2a94eb43cb9c2a1a68a6, type: 3}
   topLeft: {fileID: 717297981783741653, guid: c5fd2cbec290b8d4ea252a19407f43fb, type: 3}
   topRight: {fileID: 7176720925348603683, guid: b8a792e66dd25ef4eb84e450816002f3,

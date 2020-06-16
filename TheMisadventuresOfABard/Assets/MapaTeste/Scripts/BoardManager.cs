@@ -150,12 +150,14 @@ namespace Completed
             //Instantiate a random number of enemies based on minimum and maximum, at randomized positions.
             LayoutObjectAtRandom(enemyTiles, enemyCount, enemyCount);
 
-            Instantiate(Player, new Vector3(columns - 8, rows - 8, 0f), Quaternion.identity);
+            
 
             //Exit e os 4 cantos
             Instantiate(exit, new Vector3(columns - 1, rows - 3, 0f), Quaternion.identity);
-            Instantiate(topLeft, new Vector3(columns - 11, rows, 0f), Quaternion.identity);
-            Instantiate(topRight, new Vector3(columns, rows, 0f), Quaternion.identity);
+            //Instantiate(topLeft, new Vector3(columns - 11, rows, 0f), Quaternion.identity);
+            //Instantiate(topRight, new Vector3(columns, rows, 0f), Quaternion.identity);
+            Instantiate(topLeft, new Vector3(columns - 11, rows - 1, 0f), Quaternion.identity);
+            Instantiate(topRight, new Vector3(columns, rows - 1, 0f), Quaternion.identity);
             Instantiate(bottomLeft, new Vector3(columns - 11, rows - 11, 0f), Quaternion.identity);
             Instantiate(bottomRight, new Vector3(columns, rows - 11, 0f), Quaternion.identity);
             //bottom
@@ -170,7 +172,7 @@ namespace Completed
             Instantiate(bottom8, new Vector3(columns - 9, rows - 11, 0f), Quaternion.identity);
             Instantiate(bottom9, new Vector3(columns - 10, rows - 11, 0f), Quaternion.identity);
             //topo
-            Instantiate(topo0, new Vector3(columns - 1, rows, 0f), Quaternion.identity);
+            /*Instantiate(topo0, new Vector3(columns - 1, rows, 0f), Quaternion.identity);
             Instantiate(topo1, new Vector3(columns - 2, rows, 0f), Quaternion.identity);
             Instantiate(topo2, new Vector3(columns - 3, rows, 0f), Quaternion.identity);
             Instantiate(topo3, new Vector3(columns - 4, rows, 0f), Quaternion.identity);
@@ -180,8 +182,9 @@ namespace Completed
             Instantiate(topo7, new Vector3(columns - 8, rows, 0f), Quaternion.identity);
             Instantiate(topo8, new Vector3(columns - 9, rows, 0f), Quaternion.identity);
             Instantiate(topo9, new Vector3(columns - 10, rows, 0f), Quaternion.identity);
+            */        
             //direita
-            Instantiate(direita0, new Vector3(columns, rows - 1, 0f), Quaternion.identity);
+            //Instantiate(direita0, new Vector3(columns, rows - 1, 0f), Quaternion.identity);
             Instantiate(direita1, new Vector3(columns, rows - 2, 0f), Quaternion.identity);
             Instantiate(direita2, new Vector3(columns, rows - 3, 0f), Quaternion.identity);
             Instantiate(direita3, new Vector3(columns, rows - 4, 0f), Quaternion.identity);
@@ -192,7 +195,7 @@ namespace Completed
             Instantiate(direita8, new Vector3(columns, rows - 9, 0f), Quaternion.identity);
             Instantiate(direita9, new Vector3(columns, rows - 10, 0f), Quaternion.identity);
             //esquerda
-            Instantiate(esquerda0, new Vector3(columns - 11, rows - 1, 0f), Quaternion.identity);
+            //Instantiate(esquerda0, new Vector3(columns - 11, rows - 1, 0f), Quaternion.identity);
             Instantiate(esquerda1, new Vector3(columns - 11, rows - 2, 0f), Quaternion.identity);
             Instantiate(esquerda2, new Vector3(columns - 11, rows - 3, 0f), Quaternion.identity);
             Instantiate(esquerda3, new Vector3(columns - 11, rows - 4, 0f), Quaternion.identity);
@@ -204,16 +207,17 @@ namespace Completed
             Instantiate(esquerda9, new Vector3(columns - 11, rows - 10, 0f), Quaternion.identity);
 
             //parede
-            Instantiate(parede0, new Vector3(columns - 1, rows - 1, 0f), Quaternion.identity);
-            Instantiate(parede1, new Vector3(columns - 2, rows - 1, 0f), Quaternion.identity);
-            Instantiate(parede2, new Vector3(columns - 3, rows - 1, 0f), Quaternion.identity);
-            Instantiate(parede3, new Vector3(columns - 4, rows - 1, 0f), Quaternion.identity);
-            Instantiate(parede4, new Vector3(columns - 5, rows - 1, 0f), Quaternion.identity);
-            Instantiate(parede5, new Vector3(columns - 6, rows - 1, 0f), Quaternion.identity);
-            Instantiate(parede6, new Vector3(columns - 7, rows - 1, 0f), Quaternion.identity);
-            Instantiate(parede7, new Vector3(columns - 8, rows - 1, 0f), Quaternion.identity);
-            Instantiate(parede8, new Vector3(columns - 9, rows - 1, 0f), Quaternion.identity);
-            Instantiate(parede9, new Vector3(columns - 10, rows - 1, 0f), Quaternion.identity);
+            Instantiate(topo0, new Vector3(columns - 1, rows - 1, 0f), Quaternion.identity);
+            Instantiate(topo1, new Vector3(columns - 2, rows - 1, 0f), Quaternion.identity);
+            Instantiate(topo2, new Vector3(columns - 3, rows - 1, 0f), Quaternion.identity);
+            Instantiate(topo3, new Vector3(columns - 4, rows - 1, 0f), Quaternion.identity);
+            Instantiate(topo4, new Vector3(columns - 5, rows - 1, 0f), Quaternion.identity);
+            Instantiate(topo5, new Vector3(columns - 6, rows - 1, 0f), Quaternion.identity);
+            Instantiate(topo6, new Vector3(columns - 7, rows - 1, 0f), Quaternion.identity);
+            Instantiate(topo7, new Vector3(columns - 8, rows - 1, 0f), Quaternion.identity);
+            Instantiate(topo8, new Vector3(columns - 9, rows - 1, 0f), Quaternion.identity);
+            Instantiate(topo9, new Vector3(columns - 10, rows - 1, 0f), Quaternion.identity);
+            
             //parede1
             Instantiate(parede10, new Vector3(columns - 1, rows - 2, 0f), Quaternion.identity);
             Instantiate(parede11, new Vector3(columns - 2, rows - 2, 0f), Quaternion.identity);
@@ -225,6 +229,8 @@ namespace Completed
             Instantiate(parede17, new Vector3(columns - 8, rows - 2, 0f), Quaternion.identity);
             Instantiate(parede18, new Vector3(columns - 9, rows - 2, 0f), Quaternion.identity);
             Instantiate(parede19, new Vector3(columns - 10, rows - 2, 0f), Quaternion.identity);
+
+            Instantiate(Player, new Vector3(columns - 10, rows - 10, 0f), Quaternion.identity);
         }
     }
 }

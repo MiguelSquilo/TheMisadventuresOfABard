@@ -8,7 +8,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8104793597323072501}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -34,18 +34,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.003919959, y: -0.2389064}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.07, y: 1.37}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 1, y: 1.36}
+    newSize: {x: 1, y: 1.36}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8824017, y: 0.6443229}
   m_EdgeRadius: 0
 --- !u!1001 &1102334157061610050
 PrefabInstance:
@@ -62,7 +62,7 @@ PrefabInstance:
     - target: {fileID: 5807865326505202883, guid: ad48c880946b6464e96a949fadbcec16,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.0549
       objectReference: {fileID: 0}
     - target: {fileID: 5807865326505202883, guid: ad48c880946b6464e96a949fadbcec16,
         type: 3}
@@ -109,11 +109,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5807865326505202883, guid: ad48c880946b6464e96a949fadbcec16,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85011965
+      objectReference: {fileID: 0}
     - target: {fileID: 8391330100304789068, guid: ad48c880946b6464e96a949fadbcec16,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8aa0d1d8d5d8977448b508a2deec7d22,
+      objectReference: {fileID: 21300000, guid: c82ad3a028c0bf940a2d967b3f9a6f9c,
         type: 3}
     - target: {fileID: 8391330100304789068, guid: ad48c880946b6464e96a949fadbcec16,
         type: 3}
@@ -124,6 +129,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391330100304789068, guid: ad48c880946b6464e96a949fadbcec16,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391330100304789068, guid: ad48c880946b6464e96a949fadbcec16,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391330100304789068, guid: ad48c880946b6464e96a949fadbcec16,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9166590811438221751, guid: ad48c880946b6464e96a949fadbcec16,
         type: 3}
