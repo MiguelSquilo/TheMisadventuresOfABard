@@ -33,6 +33,8 @@ namespace Completed
         public GameObject[] floorTiles;                                 //Array of floor prefabs.
         public GameObject[] outerWallTiles;                             //Array of outer tile prefabs.
         public GameObject[] wallTiles;
+        public GameObject[] enemyTiles;
+        public GameObject Player;
         public GameObject topLeft, topRight, bottomLeft, bottomRight;
         public GameObject bottom0, bottom1, bottom2, bottom3, bottom4, bottom5, bottom6, bottom7, bottom8, bottom9;
         public GameObject topo0, topo1, topo2, topo3, topo4, topo5, topo6, topo7, topo8, topo9;
@@ -143,10 +145,12 @@ namespace Completed
             //LayoutObjectAtRandom(foodTiles, foodCount.minimum, foodCount.maximum);
 
             //Determine number of enemies based on current level number, based on a logarithmic progression
-            //int enemyCount = (int)Mathf.Log(level, 2f);
+            int enemyCount = (int)Mathf.Log(level, 2f);
 
             //Instantiate a random number of enemies based on minimum and maximum, at randomized positions.
-           //LayoutObjectAtRandom(enemyTiles, enemyCount, enemyCount);
+            LayoutObjectAtRandom(enemyTiles, enemyCount, enemyCount);
+
+            Instantiate(Player, new Vector3(columns - 8, rows - 8, 0f), Quaternion.identity);
 
             //Exit e os 4 cantos
             Instantiate(exit, new Vector3(columns - 1, rows - 3, 0f), Quaternion.identity);
