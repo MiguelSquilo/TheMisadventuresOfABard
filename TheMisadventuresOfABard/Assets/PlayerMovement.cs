@@ -26,4 +26,10 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(rb.position + moveSpeed*movement*Time.fixedDeltaTime);
 
     }
+
+    private void onTriggerEnter2D(Collider2D collider){
+        if(collider.tag == "Exit"){
+            Debug.Log("Trigger Exit!!");
+        }
+    }
 }
