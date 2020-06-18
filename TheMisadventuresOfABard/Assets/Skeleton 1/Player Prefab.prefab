@@ -102,6 +102,9 @@ MonoBehaviour:
   rb: {fileID: 8656724046257793468}
   animator: {fileID: 8656724046257793469}
   delay: 1
+  shootingObject: {fileID: 6530623767687050953, guid: 0353ae585ea11d84fafab0d8602cb852,
+    type: 3}
+  FIRE_BASE_SPEED: 5
 --- !u!50 &8656724046257793468
 Rigidbody2D:
   serializedVersion: 4

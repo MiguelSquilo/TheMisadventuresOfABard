@@ -11,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     Vector2 movement;
     public float delay = 1f;
+    public GameObject shootingObject;
+    public float FIRE_BASE_SPEED;
+    private Vector2 shootingDir;
     // Update is called once per frame
     void Update()
     {
@@ -21,10 +24,16 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
-        /* if (Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1|| Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
+        {
+            shootingDir = movement;
+            animator.SetFloat("LastHorizontal", Input.GetAxisRaw("Horizontal"));
+            animator.SetFloat("LastVertical", Input.GetAxisRaw("Vertical"));
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
          {
-             StartCoroutine(Attack());
-         }*/
+            shoot();
+         }
     }
 
     void FixedUpdate()
@@ -45,6 +54,25 @@ public class PlayerMovement : MonoBehaviour
     private void restart()
     {
         Application.LoadLevel(Application.loadedLevel);
+    }
+
+    void shoot()
+    {
+        // Vector2 shootingDirection;
+        /*if (movement.Equals(Vector2.zero))
+        {
+            shootingDirection = new Vector2(0,-1);
+        }
+        else
+        {
+            shootingDirection = movement;
+        }*/
+        shootingDir.Normalize();
+
+        GameObject note = Instantiate(shootingObject, transform.position, Quaternion.identity);
+        note.GetComponent<Rigidbody2D>().velocity = shootingDir * FIRE_BASE_SPEED;
+        note.transform.Rotate(0, 0, Mathf.Atan2(shootingDir.y, shootingDir.x) * Mathf.Rad2Deg);
+        Destroy(note, 2.0f);
     }
 }
 
