@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7236474108489952304}
   m_Layer: 8
   m_Name: skeletonFrente
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,5 +178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19d3f6b4debcac44ca5528437631d821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 3829593084086725476, guid: 39f7fd27a8ad70846bafc872a2e08a28,
-    type: 3}
+  waitToHurt: 1.5
+  isTouching: 0
+  damageToGive: 10
