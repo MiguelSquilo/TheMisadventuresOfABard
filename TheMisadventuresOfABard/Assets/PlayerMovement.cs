@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     Vector2 movement;
+    public float delay = 1f;
 
     // Update is called once per frame
     void Update()
@@ -30,6 +31,11 @@ public class PlayerMovement : MonoBehaviour
     private void onTriggerEnter2D(Collider2D collider){
         if(collider.tag == "Exit"){
             Debug.Log("Trigger Exit!!");
+            Invoke("restart", delay);
         }
+    }
+
+    private void restart(){
+        Application.LoadLevel(Application.loadedLevel);
     }
 }

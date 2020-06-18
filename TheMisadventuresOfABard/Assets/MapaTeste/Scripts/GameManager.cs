@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
     public Completed.BoardManager boardScript;
 
-    private int level = 5;
+    private int level = 1;
 
     private void Awake()
     {
@@ -18,6 +18,12 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
         boardScript = GetComponent<BoardManager>();
+        InitGame();
+    }
+
+    private void OnLevelWasLoaded(int index)
+    {
+        level++;
         InitGame();
     }
 
