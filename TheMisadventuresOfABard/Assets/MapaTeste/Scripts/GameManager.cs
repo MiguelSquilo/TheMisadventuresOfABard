@@ -7,8 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
     public Completed.BoardManager boardScript;
-   
-    private int level = 1;
+    private int level = 20;
 
     private void Awake()
     {
