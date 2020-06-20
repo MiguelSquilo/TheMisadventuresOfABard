@@ -147,10 +147,10 @@ namespace Completed
             //LayoutObjectAtRandom(foodTiles, foodCount.minimum, foodCount.maximum);
 
             //Determine number of enemies based on current level number, based on a logarithmic progression
-            int enemyCount = (int)Mathf.Log(level, 1.5f);
+            GameManager.instance.enemyCount = (int)Mathf.Log(level, 1.5f);
 
             //Instantiate a random number of enemies based on minimum and maximum, at randomized positions.
-            LayoutObjectAtRandom(enemyTiles, enemyCount, enemyCount);
+            LayoutObjectAtRandom(enemyTiles, GameManager.instance.enemyCount, GameManager.instance.enemyCount);
 
             
 

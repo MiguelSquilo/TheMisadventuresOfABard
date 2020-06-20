@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-    public int currentHealth = 50;
-    public int maxHealth = 50;
+    
 
     private bool flashActive;
     [SerializeField]
@@ -66,11 +65,11 @@ public class HealthManager : MonoBehaviour
 
     public void HurtPlayer(int damageToGive)
     {
-        currentHealth -= damageToGive;
+        GameManager.instance.currentHealth -= damageToGive;
         flashActive = true;
         flashCounter = flashLenght;
 
-        if (currentHealth <= 0)
+        if (GameManager.instance.currentHealth <= 0)
         {
             gameObject.SetActive(false);
         }
