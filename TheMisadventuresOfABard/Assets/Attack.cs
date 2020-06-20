@@ -6,6 +6,7 @@ public class Attack : MonoBehaviour
 {
     public Vector2 velocity;
     public GameObject bard;
+    public int damageToGive = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,13 @@ public class Attack : MonoBehaviour
             if (other != bard)
             {
                 Debug.Log(hit.collider.gameObject);
+                if (other.CompareTag("Enemy"))
+                {
+                    Destroy(gameObject);
+                    EnemyHealthManager healthMan;
+                    healthMan = other.gameObject.GetComponent<EnemyHealthManager>();
+                    healthMan.HurtEnemy(damageToGive);
+                }
             }
             if (other.CompareTag("Wall"))
             {
