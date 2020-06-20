@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
 
-    private HealthManager healthMan;
+    private GameManager healthMan;
     public Slider healthBar;
     public Text hpText;
 
     // Start is called before the first frame update
     void Start()
     {
-        healthMan = FindObjectOfType<HealthManager>();
+        healthMan = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame

@@ -46,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.tag == "Exit")
         {
+            // ver como vamos fazer isso devolve o numero de enemies if(GameManager.instance.enemyCount)
             Debug.Log("Trigger Exit!!");
             Invoke("restart", delay);
         }
