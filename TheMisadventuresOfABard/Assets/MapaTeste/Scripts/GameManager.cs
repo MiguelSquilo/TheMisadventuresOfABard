@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
     public Completed.BoardManager boardScript;
-    private int level = 1;
+    public int level = 1;
     public int enemyCount = 0;
     public int currentHealth = 50;
     public int maxHealth = 50;
@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         boardScript = GetComponent<BoardManager>();
         //tirar so esta aqui para se testar no Asset Mapa mas quando for para testar o Asset Menu commentar o InitGame()
-        InitGame();
+        //InitGame();
     }
 
     void InitGame()

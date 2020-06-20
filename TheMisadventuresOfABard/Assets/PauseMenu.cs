@@ -18,5 +18,6 @@ public class PauseMenu : MonoBehaviour
 
 	public void quitGame(){
     	SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1); //Advance to the next Scene in the order (Game or Level0)
+        GameManager.instance.level = 0;
     }
 }
