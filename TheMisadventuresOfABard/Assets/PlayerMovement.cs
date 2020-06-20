@@ -46,9 +46,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.tag == "Exit")
         {
-            // ver como vamos fazer isso devolve o numero de enemies if(GameManager.instance.enemyCount)
-            Debug.Log("Trigger Exit!!");
-            Invoke("restart", delay);
+            Debug.Log("Nao podes entrar");
+            Debug.Log(GameManager.instance.enemyCount);
+
+             if (GameManager.instance.enemyCount <= 0)
+             {
+                 Debug.Log("Entrou");
+                 Invoke("restart", delay);
+             }
+            // ver como vamos fazer isso devolve o numero de enemies if(GameManager.instance.enemyCount)          
         }
     }
 

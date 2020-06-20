@@ -36,7 +36,7 @@ namespace Completed
         public GameObject[] enemyTiles;
         public GameObject Player;
         //private GameObject Player1;
-        //private int count = 0;
+        public int count = 0;
         public GameObject topLeft, topRight, bottomLeft, bottomRight;
         public GameObject bottom0, bottom1, bottom2, bottom3, bottom4, bottom5, bottom6, bottom7, bottom8, bottom9;
         public GameObject topo0, topo1, topo2, topo3, topo4, topo5, topo6, topo7, topo8, topo9;
@@ -147,10 +147,9 @@ namespace Completed
             //LayoutObjectAtRandom(foodTiles, foodCount.minimum, foodCount.maximum);
 
             //Determine number of enemies based on current level number, based on a logarithmic progression
-            GameManager.instance.enemyCount = (int)Mathf.Log(level, 1.5f);
-
+            count = (int)Mathf.Log(level, 1.5f);
             //Instantiate a random number of enemies based on minimum and maximum, at randomized positions.
-            LayoutObjectAtRandom(enemyTiles, GameManager.instance.enemyCount, GameManager.instance.enemyCount);
+            LayoutObjectAtRandom(enemyTiles, count, count);
 
             
 

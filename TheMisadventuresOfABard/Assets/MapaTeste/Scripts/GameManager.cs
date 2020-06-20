@@ -20,19 +20,21 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
         boardScript = GetComponent<BoardManager>();
+        //tirar so esta aqui para se testar no Asset Mapa mas quando for para testar o Asset Menu commentar o InitGame()
         InitGame();
     }
 
     void InitGame()
     {
         boardScript.SetupScene(level);
+        enemyCount = GetComponent<BoardManager>().count -1;
     }
+
 
     private void OnLevelWasLoaded(int index)
     {
         level++;
-        InitGame();
-        
+        InitGame();       
     }
 
     // Update is called once per frame
