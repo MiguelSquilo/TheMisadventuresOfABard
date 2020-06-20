@@ -70,7 +70,9 @@ public class PlayerMovement : MonoBehaviour
         shootingDir.Normalize();
 
         GameObject note = Instantiate(shootingObject, transform.position, Quaternion.identity);
-        note.GetComponent<Rigidbody2D>().velocity = shootingDir * FIRE_BASE_SPEED;
+        Attack attackScript = note.GetComponent<Attack>();
+        attackScript.velocity = shootingDir * FIRE_BASE_SPEED;
+        attackScript.bard = gameObject;
         note.transform.Rotate(0, 0, Mathf.Atan2(shootingDir.y, shootingDir.x) * Mathf.Rad2Deg);
         Destroy(note, 2.0f);
     }

@@ -117,7 +117,7 @@ PrefabInstance:
     - target: {fileID: 9166590811438221751, guid: ad48c880946b6464e96a949fadbcec16,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 9166590811438221751, guid: ad48c880946b6464e96a949fadbcec16,
         type: 3}
