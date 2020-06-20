@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     public float delay = 1f;
     public GameObject shootingObject;
+    public GameObject pauseMenu;
     public float FIRE_BASE_SPEED;
     private Vector2 shootingDir;
     // Update is called once per frame
@@ -34,12 +35,28 @@ public class PlayerMovement : MonoBehaviour
          {
             shoot();
          }
+         if (Input.GetKeyDown(KeyCode.Escape))
+         {
+            pause();
+         }
     }
 
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveSpeed * movement * Time.fixedDeltaTime);
 
+    }
+
+    void pause(){
+    	/*
+    	if(pauseMenu.activeSelf){
+    		pauseMenu.SetActive(false);
+    	}
+    	else{
+    		pauseMenu.SetActive(true);
+    	}
+    	*/
+    	pauseMenu.SetActive(true);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

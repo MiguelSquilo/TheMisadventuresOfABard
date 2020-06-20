@@ -104,6 +104,8 @@ MonoBehaviour:
   delay: 1
   shootingObject: {fileID: 6530623767687050953, guid: 0353ae585ea11d84fafab0d8602cb852,
     type: 3}
+  pauseMenu: {fileID: 6395436740566589374, guid: 9f663735b112e6d48a929b30231dc589,
+    type: 3}
   FIRE_BASE_SPEED: 5
 --- !u!50 &8656724046257793468
 Rigidbody2D:
@@ -183,6 +185,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75c0003a777b754fac7f2d619878468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 50
-  maxHealth: 50
   flashLenght: 0.5
