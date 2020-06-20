@@ -8,7 +8,6 @@ public class MainMenu : MonoBehaviour
     public void PlayGame(){
     	SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //Advance to the next Scene in the order (Game or Level0)
         Time.timeScale = 1;
-        GameManager.instance.currentHealth = 50;
 }
 
     public void QuitGame(){

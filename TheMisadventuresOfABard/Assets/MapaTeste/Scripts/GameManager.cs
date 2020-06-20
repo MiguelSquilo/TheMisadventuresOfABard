@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,6 +29,10 @@ public class GameManager : MonoBehaviour
     {
         boardScript.SetupScene(level);
         enemyCount = GetComponent<BoardManager>().count -1;
+        if (level == 1)
+        {
+            currentHealth = 50;
+        }
     }
 
 
@@ -37,9 +42,18 @@ public class GameManager : MonoBehaviour
         InitGame();       
     }
 
+    public void meterVidaCheia()
+    {
+        currentHealth = 50;
+    }
+
     // Update is called once per frame
     void Update()
     {
-
+        if (currentHealth == 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1); //Advance to the next Scene in the order (Game or Level0)
+            level = 0;
+        }
     }
 }
