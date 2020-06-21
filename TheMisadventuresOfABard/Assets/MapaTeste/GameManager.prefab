@@ -76,6 +76,7 @@ MonoBehaviour:
   wallTiles:
   - {fileID: 8104793597323072501, guid: 44b8cf2e5bb6548499a3df667d54967d, type: 3}
   enemyTiles:
+  - {fileID: 8504938293774500532, guid: e8d8046368bfcc141be4ec72e52a4447, type: 3}
   - {fileID: 3032796267378605232, guid: b9ab654f9e30f084c95526b39ef86ce5, type: 3}
   Player: {fileID: 5339522537786758325, guid: 6e4616146f12b994b953ca31e8e14a32, type: 3}
   count: 0
