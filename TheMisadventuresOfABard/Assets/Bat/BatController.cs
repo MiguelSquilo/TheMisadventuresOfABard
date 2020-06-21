@@ -45,7 +45,7 @@ public class BatController : MonoBehaviour
         */
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Enemy")
         {
             Debug.Log("SAIU DA CENA");
             gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
@@ -54,7 +54,7 @@ public class BatController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Enemy")
         {
             Debug.Log("SAIU DA CENA");
             gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -63,7 +63,7 @@ public class BatController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Enemy")
         {
             Debug.Log("ENTROU NA CENA");
             gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
