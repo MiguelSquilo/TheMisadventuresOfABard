@@ -33,5 +33,45 @@ public class BatController : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
     }
 
+    /*
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Wall")
+        {
+            Debug.Log("ENTROU NA CENA");
+            gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+        }
+    }
+        */
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            Debug.Log("SAIU DA CENA");
+            gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+        }
+    }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            Debug.Log("SAIU DA CENA");
+            gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            Debug.Log("ENTROU NA CENA");
+            gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+        }else
+        {
+            gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
+        }
+    }
+
+    
 }
