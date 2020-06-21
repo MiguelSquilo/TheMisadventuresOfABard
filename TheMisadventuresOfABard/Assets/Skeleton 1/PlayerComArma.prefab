@@ -101,6 +101,11 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 5339522537786758329}
   animator: {fileID: 5339522537786758328}
+  delay: 1
+  shootingObject: {fileID: 6530623767687050953, guid: 0353ae585ea11d84fafab0d8602cb852,
+    type: 3}
+  pauseMenu: {fileID: 0}
+  FIRE_BASE_SPEED: 5
 --- !u!50 &5339522537786758329
 Rigidbody2D:
   serializedVersion: 4
@@ -179,6 +184,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75c0003a777b754fac7f2d619878468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 50
-  maxHealth: 50
   flashLenght: 0.5
