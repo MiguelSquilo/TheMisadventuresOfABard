@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31d13db7b072fe42b8a591ef51f328b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 3
   rb: {fileID: 5339522537786758329}
   animator: {fileID: 5339522537786758328}
   delay: 1
