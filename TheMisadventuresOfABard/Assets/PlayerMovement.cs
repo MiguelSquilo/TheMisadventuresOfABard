@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject pauseMenu;
     public float FIRE_BASE_SPEED;
     private Vector2 shootingDir;
+    public float shootingCD;
+    private float shootingTimer = 0;
     // Update is called once per frame
     void Update()
     {
@@ -24,8 +26,8 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-
-        if(Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1|| Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
+        
+        if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1|| Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
         {
             shootingDir = movement;
             animator.SetFloat("LastHorizontal", Input.GetAxisRaw("Horizontal"));
@@ -33,8 +35,12 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
          {
-            shoot();
-         }
+            if (Time.time > shootingTimer)
+            {
+                shootingTimer = Time.time + shootingCD;
+                shoot();
+            }
+        }
          if (Input.GetKeyDown(KeyCode.Escape))
          {
             pause();
@@ -92,7 +98,8 @@ public class PlayerMovement : MonoBehaviour
             shootingDirection = movement;
         }*/
         shootingDir.Normalize();
-
+        AudioSource audioData = GetComponent<AudioSource>();
+        audioData.Play(0);
         GameObject note = Instantiate(shootingObject, transform.position, Quaternion.identity);
         Attack attackScript = note.GetComponent<Attack>();
         attackScript.velocity = shootingDir * FIRE_BASE_SPEED;
