@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     Vector2 movement;
-    public float delay = 1f;
+    //public float delay = 0f;
     public GameObject shootingObject;
     public GameObject pauseMenu;
     public float FIRE_BASE_SPEED;
@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
              if (GameManager.instance.enemyCount <= 0)
              {
                  Debug.Log("Entrou");
-                 Invoke("restart", delay);
+                 Invoke("restart", 0.3f);
              }
             // ver como vamos fazer isso devolve o numero de enemies if(GameManager.instance.enemyCount)          
         }
