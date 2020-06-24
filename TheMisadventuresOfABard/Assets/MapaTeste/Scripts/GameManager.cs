@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         if (level == 2)
         {
             Debug.Log("entrofdfsdfsd");
-            vidaBoss.SetActive(false);
+            vidaBoss.SetActive(true);
         }
         
     }

@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-  /*  //Meter o BossManager
-   // private GameManager healthMan;
+    //Meter o BossManager
+    private GameManager healthMan;
     public Slider healthBar;
     public Text hpText;
 
@@ -17,11 +17,12 @@ public class UIManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+  /*  void Update()
     {
         healthBar.maxValue = healthMan.maxHealth;
         healthBar.value = healthMan.currentHealth;
         hpText.text = "HP: " + healthMan.currentHealth + "/" + healthMan.maxHealth;
     }
     */
+    
 }

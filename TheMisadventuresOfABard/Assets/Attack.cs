@@ -40,6 +40,7 @@ public class Attack : MonoBehaviour
                 Destroy(gameObject);
             }
             
+
         }
         transform.position = newPosition;
     }
