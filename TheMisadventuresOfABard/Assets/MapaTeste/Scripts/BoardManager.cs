@@ -35,7 +35,7 @@ namespace Completed
         public GameObject[] wallTiles;
         public GameObject[] enemyTiles;
         public GameObject Player;
-        //public GameObject Boss;
+        public GameObject Boss;
         //private GameObject Player1;
         public int count = 0;
         public GameObject topLeft, topRight, bottomLeft, bottomRight;
@@ -232,12 +232,12 @@ namespace Completed
             Instantiate(parede18, new Vector3(columns - 9, rows - 2, 0f), Quaternion.identity);
             Instantiate(parede19, new Vector3(columns - 10, rows - 2, 0f), Quaternion.identity);
 
-            /*
-            if(GameManager.instance.level == 15)
+            
+            if(GameManager.instance.level == 3)
             {
                 Instantiate(Boss, new Vector3(columns - 2, rows - 3, 0f), Quaternion.identity);
             }
-            */
+            
             Instantiate(Player ,new Vector3(columns - 10, rows - 10, 0f), Quaternion.identity);
 
            
