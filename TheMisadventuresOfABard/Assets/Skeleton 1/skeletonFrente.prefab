@@ -196,4 +196,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitToHurt: 1.5
   isTouching: 0
-  damageToGive: 10
+  damageToGive: 1

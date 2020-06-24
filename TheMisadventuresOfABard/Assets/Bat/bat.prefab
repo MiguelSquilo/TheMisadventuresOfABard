@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650d3876b82c896409eb69feac96e5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 2
+  currentHealth: 10
   maxHealth: 10
   flashLenght: 0.5
 --- !u!95 &8504938293774500539
@@ -196,4 +196,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitToHurt: 1.5
   isTouching: 0
-  damageToGive: 10
+  damageToGive: 1

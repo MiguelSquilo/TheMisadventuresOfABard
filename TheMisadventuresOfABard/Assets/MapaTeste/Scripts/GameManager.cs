@@ -10,8 +10,9 @@ public class GameManager : MonoBehaviour
     public Completed.BoardManager boardScript;
     public int level = 1;
     public int enemyCount = 0;
-    public int currentHealth = 50;
-    public int maxHealth = 50;
+    public int currentHealth = 6;
+    public int maxHealth = 6;
+    public GameObject vidaBoss;
 
     private void Awake()
     {
@@ -25,26 +26,37 @@ public class GameManager : MonoBehaviour
         //InitGame();
     }
 
+    
+
     void InitGame()
     {
         boardScript.SetupScene(level);
         enemyCount = GetComponent<BoardManager>().count -1;
         if (level == 1)
         {
-            currentHealth = 50;
+            currentHealth = 6;
         }
+
+
     }
 
 
     private void OnLevelWasLoaded(int index)
     {
         level++;
-        InitGame();       
+        InitGame();
+        //Para o boss ter vida mas nao aparece fica inactive(entra no log mas o setActive nao funciona)
+        if (level == 2)
+        {
+            Debug.Log("entrofdfsdfsd");
+            vidaBoss.SetActive(false);
+        }
+        
     }
 
     public void meterVidaCheia()
     {
-        currentHealth = 50;
+        currentHealth = 6;
     }
 
     // Update is called once per frame
@@ -55,5 +67,6 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1); //Advance to the next Scene in the order (Game or Level0)
             level = 0;
         }
+        
     }
 }

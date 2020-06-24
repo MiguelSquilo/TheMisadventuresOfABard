@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-
-    private GameManager healthMan;
+  /*  //Meter o BossManager
+   // private GameManager healthMan;
     public Slider healthBar;
     public Text hpText;
 
@@ -23,4 +23,5 @@ public class UIManager : MonoBehaviour
         healthBar.value = healthMan.currentHealth;
         hpText.text = "HP: " + healthMan.currentHealth + "/" + healthMan.maxHealth;
     }
+    */
 }
