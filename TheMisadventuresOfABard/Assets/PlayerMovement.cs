@@ -75,28 +75,9 @@ public class PlayerMovement : MonoBehaviour
              if (GameManager.instance.enemyCount <= 0)
              {
                  Debug.Log("Entrou");
-                Invoke("restart", 0.3f);
+                 Invoke("restart", 0.3f);
              }
             // ver como vamos fazer isso devolve o numero de enemies if(GameManager.instance.enemyCount)          
-        }
-        if (collision.tag == "AtkUp")
-        {
-            Destroy(collision.gameObject);
-            FIRE_BASE_SPEED += 1;
-            shootingCD -= 0.05f;
-        }
-        if (collision.tag == "HpUp")
-        {
-            Destroy(collision.gameObject);
-            if (GameManager.instance.currentHealth <= 5)
-            {
-                GameManager.instance.currentHealth += 1;
-            }
-        }
-        if (collision.tag == "SpdUp")
-        {
-            Destroy(collision.gameObject);
-            moveSpeed += 1;
         }
     }
 
