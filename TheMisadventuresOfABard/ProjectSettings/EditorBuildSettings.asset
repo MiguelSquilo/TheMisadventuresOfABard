@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Menu/Mapa.unity
     guid: 4c56abd11e7852a499889a5c83770980
-  - enabled: 0
-    path: Assets/Game1.unity
-    guid: 3fce83fd9b477ca46b90aee7508abd9d
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Menu/GameOver.unity
+    guid: 9889bbc295ecbe14e83c2af9fdbeb2bc
+  - enabled: 1
+    path: Assets/Menu/Win.unity
+    guid: 9f9941651524ef94c8fc4ade93bf1ce4
   m_configObjects: {}

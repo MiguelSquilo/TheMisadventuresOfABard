@@ -146,8 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650d3876b82c896409eb69feac96e5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 10
-  maxHealth: 10
+  currentHealth: 40
+  maxHealth: 40
   flashLenght: 0.5
 --- !u!95 &8782616396625564642
 Animator:
