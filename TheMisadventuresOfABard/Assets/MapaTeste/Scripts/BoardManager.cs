@@ -27,7 +27,8 @@ namespace Completed
 
 
         public int columns = 8;                                         //Number of columns in our game board.
-        public int rows = 8;                                            //Number of rows in our game board.
+        public int rows = 8;
+        //Number of rows in our game board.
         public Count wallCount = new Count(5, 9);                      //Lower and upper limit for our random number of walls per level.
         public GameObject exit;                                         //Prefab to spawn for exit.
         public GameObject[] floorTiles;                                 //Array of floor prefabs.
@@ -36,6 +37,9 @@ namespace Completed
         public GameObject[] enemyTiles;
         public GameObject Player;
         public GameObject Boss;
+        public GameObject SpdUp;
+        public GameObject HpUp;
+        public GameObject AtkUp;
         //private GameObject Player1;
         public int count = 0;
         public GameObject topLeft, topRight, bottomLeft, bottomRight;
@@ -237,10 +241,21 @@ namespace Completed
             {
                 Instantiate(Boss, new Vector3(columns - 2, rows - 3, 0f), Quaternion.identity);
             }
-            
+            if(GameManager.instance.level == 2 || GameManager.instance.level == 5 || GameManager.instance.level == 7 )
+            {
+                Instantiate(SpdUp, new Vector3(columns - 6, rows - 3, 0f), Quaternion.identity);
+            }
+            if (GameManager.instance.level == 4 || GameManager.instance.level == 9)
+            {
+                Instantiate(HpUp, new Vector3(columns - 6, rows - 3, 0f), Quaternion.identity);
+            }
+            if (GameManager.instance.level == 3 || GameManager.instance.level == 6 || GameManager.instance.level == 8)
+            {
+                Instantiate(AtkUp, new Vector3(columns - 6, rows - 3, 0f), Quaternion.identity);
+            }
+
             Instantiate(Player ,new Vector3(columns - 10, rows - 10, 0f), Quaternion.identity);
 
-           
         }
     }
 }
