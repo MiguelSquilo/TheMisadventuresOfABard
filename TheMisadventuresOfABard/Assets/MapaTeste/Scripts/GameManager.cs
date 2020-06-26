@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour
     public int enemyCount = 0;
     public int currentHealth = 6;
     public int maxHealth = 6;
-    public GameObject vidaBoss;
+    public int vidaBoss;
+    private GameObject boss;
 
     private void Awake()
     {
@@ -32,6 +33,7 @@ public class GameManager : MonoBehaviour
     {
         boardScript.SetupScene(level);
         enemyCount = GetComponent<BoardManager>().count -1;
+        boss = GetComponent<BoardManager>().bossLife;
         if (level == 1)
         {
             currentHealth = 6;
@@ -46,11 +48,13 @@ public class GameManager : MonoBehaviour
         level++;
         InitGame();
         //Para o boss ter vida mas nao aparece fica inactive(entra no log mas o setActive nao funciona)
+        /*
         if (level == 10)
         {
             Debug.Log("BossSpawn");
             vidaBoss.SetActive(true);
         }
+        */
         
     }
 
@@ -64,8 +68,16 @@ public class GameManager : MonoBehaviour
     {
         if (currentHealth == 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1); //Advance to the next Scene in the order (Game or Level0)
+            SceneManager.LoadScene(2); //Advance to the next Scene in the order (Game or Level0)
             level = 0;
+        }
+        if (vidaBoss == 0 && enemyCount == 0)
+        {
+        	level = 0;
+            SceneManager.LoadScene(3);
+            vidaBoss = 1;
+        }else{
+        	vidaBoss = boss.GetComponent<EnemyHealthManager>().currentHealth - 2;
         }
         
     }

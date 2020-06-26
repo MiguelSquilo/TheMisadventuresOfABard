@@ -8,7 +8,7 @@ public class BossScript : MonoBehaviour
     private Animator myAnim;
     private Transform target;
     [SerializeField]
-    private float speed = 0f;
+    private float speed = 1.5f;
 
 
 
