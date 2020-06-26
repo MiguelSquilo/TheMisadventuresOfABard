@@ -37,6 +37,9 @@ namespace Completed
         public GameObject Player;
         public GameObject Boss;
         public GameObject bossLife;
+        public GameObject HpUp;
+        public GameObject AtkUp;
+        public GameObject SpdUp;
         //private GameObject Player1;
         public int count = 0;
         public GameObject topLeft, topRight, bottomLeft, bottomRight;
@@ -234,11 +237,23 @@ namespace Completed
             Instantiate(parede19, new Vector3(columns - 10, rows - 2, 0f), Quaternion.identity);
 
             
-            if(GameManager.instance.level == 3)
+            if(GameManager.instance.level == 10)
             {
                 bossLife = Instantiate(Boss, new Vector3(columns - 2, rows - 3, 0f), Quaternion.identity);
             }
-            
+            if(GameManager.instance.level == 2 || GameManager.instance.level == 5 || GameManager.instance.level == 8)
+            {
+                Instantiate(SpdUp, new Vector3(columns - 6, rows - 3, 0f), Quaternion.identity);
+            }
+            if (GameManager.instance.level == 4 || GameManager.instance.level == 7 || GameManager.instance.level == 10)
+            {
+                Instantiate(HpUp, new Vector3(columns - 6, rows - 3, 0f), Quaternion.identity);
+            }
+            if (GameManager.instance.level == 3 || GameManager.instance.level == 6  )
+            {
+                Instantiate(AtkUp, new Vector3(columns - 6, rows - 3, 0f), Quaternion.identity);
+            }
+
             Instantiate(Player ,new Vector3(columns - 10, rows - 10, 0f), Quaternion.identity);
 
            

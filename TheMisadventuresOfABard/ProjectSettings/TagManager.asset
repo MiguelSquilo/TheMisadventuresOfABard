@@ -9,6 +9,9 @@ TagManager:
   - Wall
   - PauseMenu
   - VidaBoss
+  - HpUp
+  - AtkUp
+  - SpdUp
   layers:
   - Default
   - TransparentFX
