@@ -233,7 +233,7 @@ namespace Completed
             Instantiate(parede19, new Vector3(columns - 10, rows - 2, 0f), Quaternion.identity);
 
             
-            if(GameManager.instance.level == 3)
+            if(GameManager.instance.level == 10)
             {
                 Instantiate(Boss, new Vector3(columns - 2, rows - 3, 0f), Quaternion.identity);
             }

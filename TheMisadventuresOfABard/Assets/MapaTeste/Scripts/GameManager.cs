@@ -46,9 +46,9 @@ public class GameManager : MonoBehaviour
         level++;
         InitGame();
         //Para o boss ter vida mas nao aparece fica inactive(entra no log mas o setActive nao funciona)
-        if (level == 2)
+        if (level == 10)
         {
-            Debug.Log("entrofdfsdfsd");
+            Debug.Log("BossSpawn");
             vidaBoss.SetActive(true);
         }
         
